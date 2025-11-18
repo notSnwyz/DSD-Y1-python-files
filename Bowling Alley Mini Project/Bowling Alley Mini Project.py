@@ -25,3 +25,18 @@ for category, items in cafeMenu.items():
     print(f"\n--- {category} ---")
     for name, price in items.items():
         print(f"{name}: £{price}")
+
+while True:
+    order = input("\nPlease enter your order (or type 'exit' to finish): ").strip()
+    if order.lower() == 'exit':
+        break
+
+    found = False
+    for category, items in cafeMenu.items():
+        if order in items:
+            print(f"You ordered: {order} - £{items[order]}")
+            found = True
+            break
+
+    if not found:
+        print("Item not found in the menu. Please try again.")
