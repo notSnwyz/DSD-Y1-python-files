@@ -29,8 +29,25 @@ def listMenu():
 
 
 newCustomer = input("Is this person a new customer? ")
+pricePerPerson = 0
+totalPrice = 0
+
+
+
 
 if newCustomer.lower() == "yes":
+
+    print("The bowling alley is open from 12pm to 10pm.")
+    timeOfBooking = input("What time are you booking for? ")
+
     print("The price per person is £15 but there is a 20% discount for bookings with 4 or more people.")
     people = int(input("How many people are you booking for? "))
+
+    if people >= 4:
+        pricePerPerson = 15 * 0.8
+    else:
+        pricePerPerson = 15
+    
+    totalPrice = pricePerPerson * people
+    print(f"The total price for your booking of {people} people at {timeOfBooking}pm is £{totalPrice:.2f}.")
 
