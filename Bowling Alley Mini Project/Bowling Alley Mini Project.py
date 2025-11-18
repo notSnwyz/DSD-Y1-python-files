@@ -21,22 +21,16 @@ cafeMenu = {
     }
 }
 
-for category, items in cafeMenu.items():
-    print(f"\n--- {category} ---")
-    for name, price in items.items():
-        print(f"{name}: £{price}")
-
-while True:
-    order = input("\nPlease enter your order (or type 'exit' to finish): ").strip()
-    if order.lower() == 'exit':
-        break
-
-    found = False
+def listMenu():
     for category, items in cafeMenu.items():
-        if order in items:
-            print(f"You ordered: {order} - £{items[order]}")
-            found = True
-            break
+        print(f"\n--- {category} ---")
+        for name, price in items.items():
+            print(f"{name}: £{price}")
 
-    if not found:
-        print("Item not found in the menu. Please try again.")
+
+newCustomer = input("Is this person a new customer? ")
+
+if newCustomer.lower() == "yes":
+    print("The price per person is £15 but there is a 20% discount for bookings with 4 or more people.")
+    people = int(input("How many people are you booking for? "))
+
