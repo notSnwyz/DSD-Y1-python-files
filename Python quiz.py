@@ -2,10 +2,6 @@ import random
 import math
 import numpy as np
 
-
-# ---------------------------
-# Function 1: Generate Question
-# ---------------------------
 def generate_question():
     operations = ["add", "subtract", "multiply", "sqrt", "power", "factorial"]
     operation = random.choice(operations)
@@ -46,10 +42,6 @@ def generate_question():
 
     return question, answer
 
-
-# ---------------------------
-# Function 2: Check Answer
-# ---------------------------
 def check_answer(user_answer, correct_answer):
     try:
         if float(user_answer) == float(correct_answer):
@@ -58,11 +50,7 @@ def check_answer(user_answer, correct_answer):
             return False
     except:
         return False
-
-
-# ---------------------------
-# Function 3: Display Results
-# ---------------------------
+        
 def display_results(scores_array):
     print("\n--- Quiz Results ---")
 
@@ -78,9 +66,6 @@ def display_results(scores_array):
     print(f"Percentage: {percentage:.2f}%")
 
 
-# ---------------------------
-# Main Program
-# ---------------------------
 def main():
     print("Welcome to the Maths Challenge Quiz!")
     num_questions = int(input("How many questions would you like? "))
@@ -103,3 +88,4 @@ def main():
 
 
 main()
+
