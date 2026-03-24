@@ -1,0 +1,6 @@
+2026-03-16 10:36:09,063 - __main__ - INFO - Program started
+2026-03-16 10:36:09,064 - __main__ - WARNING - Example warning
+2026-03-16 10:36:09,065 - __main__ - ERROR - Example error
+2026-03-16 10:36:12,531 - __main__ - INFO - Program started
+2026-03-16 10:36:12,531 - __main__ - WARNING - Example warning
+2026-03-16 10:36:12,531 - __main__ - ERROR - Example error
